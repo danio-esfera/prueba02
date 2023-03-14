@@ -7,6 +7,21 @@
     <title>Pruebas javascript</title>
 </head>
 <body>
-    
+    <script>
+        function randomColor(numMax){
+            return Math.round(Math.random() * numMax);
+        }
+        let cout;
+        document.addEventListener("keydown", function(evento){
+            var random = [
+                randomColor(255),
+                randomColor(255),
+                randomColor(255)
+            ]
+            document.body.style.backgroundColor =
+            "rgb(" + random[0] + ", " + random[1] + ", " + random[2] + ")";
+            console.log('Se cambia a color RGB: ' + random[0] + ' ' +random[1] + ' ' +random[2]);
+        });
+    </script>
 </body>
 </html>
